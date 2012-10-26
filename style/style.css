@@ -1,0 +1,177 @@
+* {
+	font-family: Helvetica, Arial, 'sans-serif';
+	font-size: 12px;
+}
+
+body {
+	margin: 0px;
+	padding: 0px;
+	background-color: #f4f4f4;
+}
+
+#page {
+	padding: 20px;
+	margin: 0 auto;
+	min-height: 100%;
+}
+
+rect.node {
+	fill-opacity: 1;
+}
+
+path.link {
+  stroke-opacity: .3;
+  fill-opacity: 0;
+}
+
+g.cause rect{
+	
+	stroke-opacity: .3;
+	
+}
+
+.label, .nodelabel {
+	font-size:10px;
+}
+
+.grouplabel, .timelabel {
+	
+	cursor:pointer;
+}
+
+#plottable {
+	cursor:pointer;	
+}
+
+#loading, .letters-window {
+	width:100%;
+	background-color: #fff;
+	margin:0px;
+	padding: 0px 10px;
+	position: fixed;
+	top: 0px;
+	border:1px solid #cccccc;
+	
+	-moz-box-shadow: 0px 0px 5px #ccc;
+	-webkit-box-shadow: 0px 0px 5px #ccc;
+	box-shadow: 0px 0px 5px #ccc;
+	/* For IE 8 */
+	-ms-filter: "progid:DXImageTransform.Microsoft.Shadow(Strength=4, Direction=135, Color='#cccccc')";
+	/* For IE 5.5 - 7 */
+	filter: progid:DXImageTransform.Microsoft.Shadow(Strength=4, Direction=135, Color='#cccccc');
+}
+
+#letters {
+	clear:both;
+}
+
+#letters th {
+	height: 20px;
+	cursor: pointer;
+}
+
+.letters-window {
+	padding: 15px;
+	margin: 20px;
+	font-size: 10px;
+	max-height: 500px;
+}
+
+.letters-window div {
+	margin: 5px 0px;
+}
+
+.letters-window td {
+	font-size:11px;
+	font-family: Helvetica;
+	padding:5px;
+}
+
+#letters_filter {
+	float:right;
+}
+
+#letters_length {
+	float:left;
+	clear:both;
+}
+
+#letters_processing {
+	clear:both;
+}
+
+.sorting_desc, .sorting_asc {
+	text-decoration: underline;
+}
+
+.close {
+	float: right;
+	font-weight: bold;
+	cursor:pointer;
+}
+
+.odd {
+	background-color:#eee;
+}
+
+.dataTables_info {
+	font-size: 11px;
+	color: #888;	
+}
+
+.paginate_button ,.paginate_active {
+	margin-right: 10px;
+	cursor: pointer;
+	font-size: 11px;
+}
+
+#loading img {
+	float:left;
+	margin-top:5px;
+}
+
+#loading p {
+	float:left;
+	margin-left:10px;
+}
+
+
+.compass .back {
+  fill: #eee;
+  fill-opacity: .8;
+}
+
+.compass .fore {
+  stroke: #999;
+  stroke-width: 1.5px;
+}
+
+.compass rect.back.fore {
+  fill: #999;
+  fill-opacity: .3;
+  stroke: #eee;
+  stroke-width: 1px;
+  shape-rendering: crispEdges;
+}
+
+.compass .direction {
+  fill: none;
+}
+
+.compass .chevron {
+  fill: none;
+  stroke: #999;
+  stroke-width: 5px;
+}
+
+.compass .zoom .chevron {
+  stroke-width: 4px;
+}
+
+.compass .active .chevron, .compass .chevron.active {
+  stroke: #fff;
+}
+
+.compass.active .active .direction {
+  fill: #999;
+}

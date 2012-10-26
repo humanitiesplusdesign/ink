@@ -1,0 +1,53 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN"
+   "http://www.w3.org/TR/html4/strict.dtd">
+
+<html lang="en">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<title>Mapping the Republic of Letters</title>
+	<script type="text/javascript" src="lib/d3/d3.min.js"></script>
+	<script type="text/javascript" src="lib/d3/d3.layout.min.js"></script>
+	<script type="text/javascript" src="lib/d3/d3.time.min.js"></script>
+	<script type="text/javascript" src="lib/d3/d3.geom.min.js"></script>
+	<script type="text/javascript" src="lib/d3/d3.csv.min.js"></script>
+
+	<script type="text/javascript" src="lib/polymaps/polymaps.min.js"></script>
+
+	<script type="text/javascript" src="lib/jquery/jquery-1.7.1.min.js"></script>
+	<script type="text/javascript" src="lib/jquery/jquery.DOMwindow.js"></script>
+	<script type="text/javascript" src="lib/jquery/jquery.dataTables.min.js"></script>
+	<script type="text/javascript" src="lib/jquery/jquery-ui-1.8.12.custom.min.js"></script>
+		
+	<script type="text/javascript" src="js/ink.js"></script>
+	<script type="text/javascript" src="js/ink.layout.js"></script>
+	<script type="text/javascript" src="js/ink.vis.js"></script>
+	
+	<link type="text/css" rel="stylesheet" href="style/style.css"/>
+    
+</head>
+<body>
+	
+	<div id="loading"><img src="style/loading.gif"><p>Loading...</p></div>
+	
+	<div id="page">
+		<select name="on">
+			<option name="on" value="letters" >Letters
+			<option name="on" value="people" >People
+		</select>
+		
+		<form>
+			<input type="text" value="1750" id="start" name="start"/>
+			<input type="text" value="1770" id="end" name="end"/>
+			<input type="button" value="Go" id="send" name="send"/>
+		</form>
+		
+		<div id="sheet">
+		</div>
+		<div id="map"></div>
+		<div id="timeline"></div>	
+		<div id="sankey"></div>
+	</div>
+	<script type="text/javascript" src="js/main.js"></script>
+
+</body>
+</html>
