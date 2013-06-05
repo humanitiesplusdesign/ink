@@ -13,7 +13,7 @@ import os
 import json
 
 def make_filter(start,end):
-	return lambda item: int(item['t']) >= start and int(item['t']) <= end
+	return lambda item: item['t'] and int(item['t']) >= start and int(item['t']) <= end
 
 def main():
 	
@@ -77,8 +77,6 @@ def main():
 			if c in people:
 				g = people[c]['Gender']
 				n = people[c]['Nationality']
-				
-				"""
 				ms = []
 				if people[c]['Milieu1'] != "" and people[c]['Milieu1'] != None:
 					ms.append(people[c]['Milieu1'])
@@ -87,50 +85,43 @@ def main():
 				if people[c]['Milieu3'] != "" and people[c]['Milieu3'] != None:
 					ms.append(people[c]['Milieu3'])
 				
-				"""
-				#for m in ms:
-				if g in years[year]['g']:
-					years[year]['g'][g] += 1
-				else:
-					years[year]['g'][g] = 1
 				
-				if n in years[year]['n']:
-					years[year]['n'][n] += 1
-				else:
-					years[year]['n'][n] = 1
-				
-				"""
-				if m in years[year]['m']:
-					years[year]['m'][m] += 1
-				else:
-					years[year]['m'][m] = 1
-				"""
-				
-				if p in years[year]['p']:
-					years[year]['p'][p] += 1
-				else:
-					years[year]['p'][p] = 1
-				
-				if 'total' in years[year]['c']:
-					years[year]['c']['total'] += 1
-				else:
-					years[year]['c']['total'] = 1
-				
-				if not g in values['g']:
-					values['g'].append(g)
-				if not n in values['n']:
-					values['n'].append(n)
-				"""
-				if not m in values['m']:
-					values['m'].append(m)
-				"""
-				if not p in values['p']:
-					values['p'].append(p)
-				if not 'total' in values['c']:
-					values['c'].append('total')
-				
-				values['m'] = [""]
-	
+				for m in ms:
+					if g in years[year]['g']:
+						years[year]['g'][g] += 1
+					else:
+						years[year]['g'][g] = 1
+					
+					if n in years[year]['n']:
+						years[year]['n'][n] += 1
+					else:
+						years[year]['n'][n] = 1
+					
+					if m in years[year]['m']:
+						years[year]['m'][m] += 1
+					else:
+						years[year]['m'][m] = 1
+					
+					if p in years[year]['p']:
+						years[year]['p'][p] += 1
+					else:
+						years[year]['p'][p] = 1
+					
+					if 'total' in years[year]['c']:
+						years[year]['c']['total'] += 1
+					else:
+						years[year]['c']['total'] = 1
+					
+					if not g in values['g']:
+						values['g'].append(g)
+					if not n in values['n']:
+						values['n'].append(n)
+					if not m in values['m']:
+						values['m'].append(m)
+					if not p in values['p']:
+						values['p'].append(p)
+					if not 'total' in values['c']:
+						values['c'].append('total')
 	result = {}
 	result['years'] = years
 	result['values'] = values			

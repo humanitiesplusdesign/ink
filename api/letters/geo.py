@@ -14,7 +14,7 @@ import os
 import json
 
 def make_filter(start,end):
-	return lambda item: int(item['t']) >= start and int(item['t']) <= end
+	return lambda item: item['t'] and int(item['t']) >= start and int(item['t']) <= end
 
 def main():
 	

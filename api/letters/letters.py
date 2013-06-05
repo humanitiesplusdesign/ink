@@ -93,7 +93,7 @@ def main():
 		good = True
 		
 		if 'start' in query and 'end' in query:
-			if int(l['t']) >= query['start'] and int(l['t']) <= query['end']:
+			if l['t'] and int(l['t']) >= query['start'] and int(l['t']) <= query['end']:
 				pass
 			else:
 				good = False

@@ -120,7 +120,7 @@ var color = d3.scale.category20(),
 			
 			node = {}
 			node[dimension] = d.name;
-			
+						
 			// Font
 			sankey.vis().selectAll(".grouplabel")
 				.style("font-weight", "normal")
@@ -199,9 +199,12 @@ var color = d3.scale.category20(),
 		m : "Milieu",
 		s : "Source",
 		d : "Destination",
-		a : "Author",
-		r : "Recipient",
-		t : "Date",
+		a : "Author Id",
+		a_name : "Author",
+		r : "Recipient Id",
+		r_name : "Recipient",
+		t : "Year",
+		t_full : "Date",
 		id : "Id"
 	},
 	width = parseInt(d3.select("#page").style("width")),
@@ -215,7 +218,7 @@ d3.select("#send").on("click",function(){
 		
 	query.start = d3.select("#start").property("value")
 	query.end = d3.select("#end").property("value")
-	query.on = $("select option:selected").attr("value")
+	query.on = "letters"//$("select option:selected").attr("value")
 	
 	query.action = "time"
 	

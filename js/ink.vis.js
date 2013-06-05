@@ -215,7 +215,7 @@
 					.on("mouseover",function(d){ event.nodeover.dispatch(d) })
 					.on("mouseout",function(d){ event.nodeout.dispatch(d) })
 					.attr("cursor","pointer")
-					
+								
 			node.append("svg:title")
 				.text(function(d) { return d.name +  " (" + (d3.max([d.in, d.out])/(layout.groups()[d.group].value)*100).toFixed(2) + "%)"; })
 			
@@ -229,8 +229,6 @@
 					.attr("alignment-baseline","middle")
 					.attr("opacity",0)
 					.text(function(d){ return d.name; })
-						
-			
 			
 			group.append("svg:text")
 				.attr("class",function(d){ return "grouplabel " + d.key.split(' ').join('-'); })
@@ -318,7 +316,7 @@
 		timestack.highlight = function(node){
 			//check for spaces...
 			node = node.split(' ').join('-')
-			
+			console.log(node)
 			vis.selectAll(".node")
 				.attr("opacity", .1)
 			vis.selectAll(".node."+node)
@@ -385,8 +383,9 @@
 		      .style("fill", function(d, i) {
 				order[d[0].d] = i;
 				
+				// Exception for plottable/unplottable
 				if (dimension == 'p') {
-					return d3.scale.ordinal().domain([0,1]).range(["#333","#ddd"])(i)
+					return d3.scale.ordinal().domain([0,1]).range(["#ddd","#333"])(i)
 				}
 				else return color(i);
 				})
