@@ -1,7 +1,10 @@
+#!/usr/bin/env python
+# encoding: utf-8
 """
 letters.py
-by Giorgio Caviglia
-giorgio.caviglia@gmail.com
+
+Created by Giorgio Caviglia on 2012-01-02.
+Copyright (c) 2012 __MyCompanyName__. All rights reserved.
 """
 
 import sys

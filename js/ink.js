@@ -2,7 +2,6 @@
 	
 	ink = {};
 	
-	// Returns node's index from name and group
 	function getNodeIndex(array, name, group) {
 		for (var i in array){		
 			var a = array[i]
@@ -13,7 +12,7 @@
 		return -1;
 	}
 	
-	
+	// Convert array of objects in nodes and links according to a sequence
 	ink.net = function(array, sequence){
 		var n = [],
 			l = [],
@@ -81,7 +80,7 @@
 		return properties;
 	}
 	
-	// Returns a geoJson formatted array of features (points)
+	
 	ink.geo = function(array, f){
 		
 		if (arguments.length == 1)

@@ -1,6 +1,10 @@
+#!/usr/bin/env python
+# encoding: utf-8
 """
-by Giorgio Caviglia
-giorgio.caviglia@gmail.com
+prova.py
+
+Created by Giorgio Caviglia on 2011-12-21.
+Copyright (c) 2011 __MyCompanyName__. All rights reserved.
 """
 
 import sys

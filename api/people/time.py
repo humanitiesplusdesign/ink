@@ -1,7 +1,9 @@
+#!/usr/bin/env python
+# encoding: utf-8
 """
 time.py
-by Giorgio Caviglia
-giorgio.caviglia@gmail.com
+
+Created by Giorgio Caviglia on 2011-12-21.
 """
 
 import sys

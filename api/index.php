@@ -1,15 +1,4 @@
 <?php
-/*
-
- This php file works as the main API index.
- It works as a bridge between the AJAX calls from the js application and the actual python scripts
- that perform the query on static json files located in data/
- Although it sounds weird it was the best solution to make the application working on a server,
- without using wsgi or other python modules.
- It basically calls the appropriate python script (via passthru) and pass it the sequence of parameters.
-
-*/
-
 
 if(array_key_exists( "action", $_REQUEST ) ) {
 	$action = $_REQUEST['action'];
