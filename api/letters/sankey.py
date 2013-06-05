@@ -56,13 +56,13 @@ def main():
 					ms.append(people[c]['Milieu2'])
 				if people[c]['Milieu3'] != "" and people[c]['Milieu3'] != None:
 					ms.append(people[c]['Milieu3'])
-				for m in ms:
-					o = {}
-					o['_id'] = c
-					o['g'] = g
-					o['n'] = n
-					o['m'] = m
-					sankey.append(o)
+				#for m in ms:
+				o = {}
+				o['_id'] = c
+				o['g'] = g
+				o['n'] = n
+				o['m'] = ""
+				sankey.append(o)
 
 	print json.dumps(sankey);
 
